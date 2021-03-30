@@ -1,0 +1,570 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable id="vV$_iq8YMkevE)qdp0=t">odpad</variable><variable id="x[^}fHMI{mGwo-0FCN%c">projectileInterval</variable><variable id="a/Oepjj]1%W}T2y30H%@">projectileMillis</variable><variable id="UydDh-:jMNiLZ*`ww2nb">blueStart</variable><variable id="@k1(z7+QMZsQ8kCnR`6Z">brownStart</variable><variable id="G+YTE6^^mW,pi$M]*MI9">jedlo2</variable><variable id="Sme|vL=l~~Ws+yA$bL^U">zmesStart</variable><variable id=";8x,yEy.|O:iy)BB=aS(">zelenina</variable><variable id="LbKN{v#FtyN(nxD]=Y[-">orangeStart</variable><variable id="})[r|A=%,.NMOZRGM`iE">jedlo</variable><variable id="*__f0Ev{ksU#4$aP+`mc">pou</variable><variable type="KIND_SpriteKind" id="C7cqahM1sF~K-z%pqg/.">Player</variable><variable type="KIND_SpriteKind" id="4F5V(cY6LY=x7EF:?wLn">Projectile</variable><variable type="KIND_SpriteKind" id="(UrQls-uPd^ecaf:4R~0">Food</variable><variable type="KIND_SpriteKind" id="Gi=}Zui;x3z*sQ~me_0n">Enemy</variable></variables><block type="pxt-on-start" id="=o_|oI|l#X5Us{:clAut" x="0" y="0"><statement name="HANDLER"><block type="gamesetbackgroundimage" id="pu*(/:=_;g@ZEzppU9;`"><value name="img"><shadow type="background_image_picker" id="dXz4Nckra,NwrEf/.U9v"><field name="img">img`
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999955555555555559
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999995555599999999955555555555559
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999555555559999999999999955555555555559
+9999999999999999999991111111119999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999955555555555559
+9999999999999999911111111111111111111111119999999999999999999999999111111111119999999999991199999999999999999999999999999999999999999999999959999955555555555559
+9999999999999999111111111111111111111111111199999999999999999999911111111111111199999999111111111999999999999999999999999999999999999995555599999955555555555559
+9999999999999911111111111111111111111111111119999999999999999999111111111111111111111111111111111199999999999999999999999999999999955559999999999995555555555599
+9999999999999911111111111111111111111111111119999999999999999991111111111111111111111111111111111119999999999999999999999999999999999999999999999999555555555999
+9999999999999911111111111111111111111111111119999999999999999991111111111111111111111111111111111119999999999999999999999999999999999999999555999999955555559999
+9999999999999911111111111111111111111111111119999999999999999991111111111111111111111111111111111119999999999999999999999999999999999999999599999999999999999999
+9999999999999111111111111111111111111111111119999999999999999991111111111111111111111111111111111199999999999999999999999999999999999999999999999999999999999999
+9999999999999111111111111111111111111111111199999999999999999999111111111111111111111111111111119999999999999999999999999999999999999999999999999999999999999999
+9999999999999111111111111111111111111111111999999999999999999999911111111111111111111111111111999999999999999999999999999999999999999999999999999599995999959999
+9999999999999111111111111111111111111111119999999999999999999999999111111111111111111111111119999999999999999999999999995559999999999999999999995999995999959999
+9999999999999911111111111111111111111119999999999999999999999999999911111111111111111111111199999999999999999999999555559999999999999999999999959999995999959999
+9999999999999911111111111111999999999999999999999999999999999999999999111111111111111111119999999999999999999995555999999999999999999999999999599999959999959999
+9999999999999999111111111199999999999999999999999999999999999999999999991111111111111199999999999999999999995559999999999999999999999999999955999999959999599999
+9999999999999999999999999999999999999999999999999999999999999999999999999991111999999999999999999999999999999999999911111111111111999999999599999999599599599599
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999911111111111111111111119955999999999599599599599
+9999999999999999999999999999999999999999999999991111911111111999999999999999999999999999999999999999999999999991111111111111111111111111199999999999999599599599
+9999999999999999999999999999999999999999999999911111111111111119999999911999999999999999999999999999999999991111111111111111111111111111199999999999995999999599
+9999999999999999999999999999999999999999999999911111111111111111111111111199999999999999999999999999999999111111111111111111111111111111199999999999995999999959
+9999999999999999999999999999999999999999999999991111111111111111111111111199999999999999999999999999999999111111111111111111111111111111199999599999995999999959
+9999999999999999999999999999999999999999999999991111111111111111111111111199999999999999999999999999999999111111111111111111111111111111199995999999959999999959
+9999999999999999977777777777779999999999999999991111111111111111111111111199999999999999999999999999999999111111111111111111111111111111119559999999959999999959
+9999999999999977777777777777777779999999999999991111111111111111111111111199999999999999999999999999999999911111111111111111111111111111955999999999959999999959
+9999999999997777777777777777777777799999999999991111111111111111111111111199999999999999999999999999999999991111111111111111111111111119959999999999599999999959
+9999999999977777777777777777777777779999999999991111111111111111111111111999999999999999999999999999999999999111111111111111111111199999999999999995999999999959
+9999999999777777777777777777777777777999999999999111111111111111111111119999999999999999999999999999999999999999999111111111111199999999999999999995999999999995
+9999999977777777777777777222777777777779999999999911111111111111111111999999999999999999999999999999999999999999999999999999999999999999999999999999999999999995
+9999999777777777777777777222777777777777999999999999911111111111111199999999999999999999999999999999999999999999999999999999999999999999999999999999999999999995
+9999999777777222777777777222777777777777999999999999999111111111119999999999999999999999999999999999999999999999999999999999999999999999999999999999999999599995
+9999997777777222777777777777777777777777799999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999599999
+9999977777777222777777777777777777777777779999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999599999
+9999777777777777777777777777777777777777777999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999995999999
+9999777777777777777777777777777777777777777999999999999999999999999999999999999999999999999999999999999999999999999999999999979999999999999999999999999995999999
+9997777777777777777777777777777777777777777799999999999999999999999999999999999999999999999999999999999999999999999999999999979999999999999999999999999995999999
+9997777777777777777777777777777777777777777799999999999999999999999999999999999999999999999999999999999999999999999999999999777999999999999999999999999995999999
+9997777777777777777777777777777777777222777799999999999999999999999999999999999999999999999999999999999999999999999999999999777999999999999999999999999999999999
+9977777777777777777777777777777777777222777779999999999999999999999999999999999999999999999999999999999999999999999999999997777799999999999999999999999999999999
+9977777777777777777777777777777777777222777779999999999999999999999999999999999999999999999999999999999999999999999999999997777779999999999999999999999999999999
+9977777777777777777777777777777777777777777779999999999999999999999999999999999999999999999999999999999999999999999999999977777779999999999999999999999999999999
+9977777722277777777777722277777777777777777779999999999999999999999999999999999999999999999999999999999999999999999999999977777777999999999999999999999999999999
+9977777722277777777777722277777777777777777779999999999999999999999999999999999999999999999999999999999999999999999999999777777777999999999999999999999999999999
+9977777722277777777777722277777777777777777779999999999999999999999999999999999999999999999999999999999999999999999999997777777777799999999999999999999999999999
+9977777777777777777777777777777777777777777779999999999999999999999999999999999999999999999999999999999999999999999999997777777777779999999999999999999999999999
+9977777777777777777777777777777777777777777779999999999999999999999999999999999999999999999999999999999999999999999999977777777777777799999999999999999999999999
+9977777777777777777777777777777777777777777779999999999999999999999999999999999999999999999999999999999999999999999999977777777777777799999999999999999999999999
+9977777777777777777777777777777777777777777779999999999999999999999999999999999999999999999999999999999999999999999999777777777777777779999999999999999999999999
+9977777777777777777777777777777777777777777779999999999999999999999999999999999999999999999999999999999999999999999777777777777777777777999999999999999999999999
+9977777777777777777777777777777777777777777779999999999999999999999999999999999999999999999999999999999999999999997777777777777777777777779999999999999999999999
+9977777777777777777777777777777777777777777779999999999999999999999999999999999999999999999999999999999999999999977777777777777777777777777999999999999999999999
+9997777777777777777777777777777777777777777799999999999999999999999999999999999999999999999999999999999999999997777777777997777777777777777799999999999999999999
+9997777777777777777777777777777777222777777799999999999999999999999999999999999999999999999999999999999999999977777799999997777777777777777779999999999999999999
+9997777777777777777222777777777777222777777799999999999999999999999999999999999999999999999999999999999999999999994449999977777779997777777777799999999999999999
+9999777722277777777222777777777777222777777999999999999999999999999999999999999999999999999999999999999999999999994449999777777777999994477777777999999999999999
+9999777722277777777222777777777777777777777999999999999999999999999999999999999999999999999999999999999999999999999999997777777777799994497777777779999999999999
+9999977722277777777777777777777777777777779999999999999999999999999999999999999999999999999999999999999999999999999999977777777777779994999999999999999999999999
+9999997777777777777777777777777777777777799999999999999999999999999999999999999999999999999999999999999999999999999999777777777777777999999999999999999999999999
+9999999777777777777777777777777777777777999999999999999999999999999999999999999999999999999999999999999999999999999999777777777777777799999999999999999999999999
+9999999777777777777777777777772227777777999999999999999999999999999999999999999999999999999999999999999999999999999997777777777777777777999999999999999999999999
+9999999977777777777777777777772227777779999999999999999999999999999999999999999999999999999999999999999999999999999777777777777777777777799999999999999999999999
+9999999999777777777777777777772227777999999999999999999999999999999999999999999999999999999999999999999999999999997777777777777777777777779999999999999999999999
+9999999999977777777777777777777777779999999999999999999999999999999999999999999999999999999999999999999999999999977777777777777777777777777999999999999999999999
+9999999999997777777777777777777777799999999999999999999999999999999999999999999999999999999999999999999999999999777777777777777777777777777779999999999999999999
+9999999999999477777777777777777779999999999999999999999999999999999999999999999999999999999999999999999999999997777777777777777777777777777777779999999999999999
+9999999999999944477777777777774449999999999999999999999999999999999999999999999999999999999999999999999999997777777777777777777777777777777777777999999999999999
+9999999999999944444444444444444449999999999999999999999999999999999999999999999999999999999999999999999999977777777777777777777777777777777777777779999999999999
+999999999999994444444444444444444999999999999999999999999999999999999999999999999999999999999999999999999777777777777777777..777777799999774777777.7799999999999
+9999999999999994444444444444444449999999999999999999999999999999999999999999999999999999999999999999999977777777777777777997777777777999999449999977799999999999
+9999999999999994444444444444444449999999999999999999999999999999999999999999999999999999999999999999999777777744777777999997777777777799999449999999999999999999
+9999999999999994444444444444444449999999999999999999999999999999999999999999999999999999999999999999977777777447777999999977777777777779999949999999999999999999
+9999999999999994444444444444444499999999999999999999999999999999999999999999999999999999999999999999999999999449999999999777777777777777999949999999999999999999
+9999999999999994444444444444444499999999999999999999999999999999999999999999999999999999999999999999999999999999999999997777777777777777799999999999999999999999
+9999999999999999444444444444444499999999999999999999999999999999999999999999999999999999999999999999999999999999999999977777777777777777779999999999999999999999
+9999999999999999444444444444444499999999999999999999999999999999999999999999999999999999999999999999999999999999999977777777777777777777777999999999999999999999
+9999999999999999444444444444444999999999999999999999999999999999999999999999999999999999999999999999999999999999999777777777777777777777777799999999999999999999
+9999999999999999444444444444444999999999999999999999999999999999999999999999999999999999999999999999999999999999997777777777777777777777777779999999999999999999
+9999999999999999444444444444444999999999999999999999999999999999999999999999999999999999999999999999999999999999977777777777777777777777777777999999999999999999
+9999999999999999444444444444444999999999999999999999999999999999999999999999999999999999999999999999999999999977777777777777777777777777777777779999999999999999
+9999999999999999444444444444444999999999999999999999999999999999999999999999999999999999999999999999999999999777777777777777777777777777777777777799999999999999
+9999999999999999944444444444444999999999999999999999999999999999999999999999999999999999999999999999999999977777777777777777777777777777777777777779999999999999
+9999999999999999944444444444444999999999999999999999999999999999999999999999999999999999999999999999999977777777777777777777777777777777777777777777999999999999
+9999999999999999944444444444444999999999999999999999999999999999999999999999999999999999999999999999997777777777777777777777777777777777777777777777779999999999
+9999999999999999944444444444449999999999999999999999999999999999999999999999999999999999999999999999997777777777777777777777777777777777777777777777777799999999
+9999999999999999944444444444449999999999999999999999999999999999999999999999999999999999999999999997777777777777777777777777777777777777777777777777777779999999
+9999999999999999944444444444449999999999999999999999999999999999999999999999999999999999999999999977777777777777777777777777777777777777777777777777777779999999
+9999999999999999944444444444449999999999999999999999999999999999999999999999999999999999999999999999999977777777777777777777777777777777777777777777799999999999
+9999999999999999944444444444449999999999999999999999999999999999999999999999999999999999999999999999999999999999997447777777777777777777777777999999999999999999
+9999999999999999944444444444449999999999999999999999999999999999999999999999999999999999999999999999999999999999999449999999944444499999999999999999999999999999
+9999999999999999944444444444449999999999999999999999999999999999999999999999999999999999999999999999999999999999999499999999944444499999999999999999999999999999
+9999999999999999944444444444449999999999999999999999999999999999999999999999999999999999999999999999999999999999999499999999944444499999999999999999999999999999
+9999999999999999944444444444449999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999944444499999999999999999999999999999
+9999999999999999944444444444449999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999944444499999999999999999999999999999
+9999999999999999944444444444449999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999944444499999999999999999999999999999
+9999999999999999944444444444449999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999944444499999999999999999999999999999
+9999999999999999944444444444449999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999944444499999999999999999999999999999
+9999999999999999944444444444449999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999944444499999999999999999999999999999
+9999999999999999944444444444449999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999944444499999999999999999999999999999
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+`</field><data>{"commentRefs":[],"fieldData":{"img":"myImages.image10"}}</data></shadow></value><next><block type="variables_set" id="tAPT(aZ#XjKHmiUGDiwR"><field name="VAR" id="*__f0Ev{ksU#4$aP+`mc">pou</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="8:MzMr4Y,j{J7IBw1`m}"><value name="img"><shadow type="screen_image_picker" id="Y9ov80YP47uAfln~ZlG9"><field name="img">img`
+. . . . 8 8 8 8 8 8 8 . . . . . 
+. . 8 8 6 6 6 6 6 6 6 8 8 . . . 
+. 8 6 6 6 6 6 6 6 6 6 6 6 8 . . 
+. 8 6 6 7 7 6 6 6 7 7 6 6 8 . . 
+8 6 6 6 7 1 6 6 6 7 1 6 6 6 8 . 
+8 6 6 6 7 1 6 6 6 7 1 6 6 6 8 . 
+8 6 6 6 6 6 6 6 6 6 6 6 6 6 8 . 
+8 6 6 6 6 6 6 6 6 6 6 6 6 6 8 . 
+8 6 6 2 2 2 2 2 2 2 2 2 6 6 8 . 
+8 6 6 2 d d 1 d 1 1 d e 6 6 8 . 
+8 6 6 2 2 2 d e e d 2 2 6 6 8 . 
+. 8 6 6 6 2 2 2 2 2 2 6 6 8 . . 
+. 8 6 6 6 6 6 6 6 6 6 6 6 8 . . 
+. . 8 8 6 6 6 6 6 6 6 8 8 . . . 
+. . . . 8 8 8 8 8 8 8 . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field><data>{"commentRefs":[],"fieldData":{"img":"myImages.image14"}}</data></shadow></value><value name="kind"><shadow type="spritekind" id="kjCb|DgMx4FG@_:GKm2n"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="spritesetsetstayinscreen" id="Az9PR)tb.Yd.`UzZ|*@:"><value name="sprite"><block type="variables_get" id="DQa}{8rGt4lJTGVVpD]`"><field name="VAR" id="*__f0Ev{ksU#4$aP+`mc">pou</field></block></value><value name="on"><shadow type="toggleOnOff" id="Q!C}aFMa~Qhy-q]]s~(D"><field name="on">true</field></shadow></value><next><block type="spritesetpos" id="!xqd1T1XP_^$5@IfSfn;"><value name="sprite"><block type="variables_get" id="QY4s3~o/;`{_f6-:U`,9"><field name="VAR" id="*__f0Ev{ksU#4$aP+`mc">pou</field></block></value><value name="x"><shadow type="positionPicker" id="YcFk{)?D=rR[hT)j|/1]"><field name="index">76</field></shadow></value><value name="y"><shadow type="positionPicker" id="pc9h_~*pX@y6R[fH4ny,"><field name="index">111</field></shadow></value><next><block type="hudSetLife" id="iwk|1t037-{]rh,!?Q2K"><value name="value"><shadow type="math_number" id="R6VXG5%TxkrY2$kDyUXf"><field name="NUM">3</field></shadow></value><next><block type="game_control_sprite" id=",C;mys?O)Qi_99YdPRuQ"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="2" _input_init="true"></mutation><value name="sprite"><shadow type="variables_get" id="^)[4Szk)FND]9t)#41!{"><field name="VAR" id="*__f0Ev{ksU#4$aP+`mc">pou</field></shadow></value><value name="vx"><shadow type="math_number" id="qNXw0E5(o7N~CUGkija8"><field name="NUM">150</field></shadow></value><value name="vy"><shadow type="math_number" id="+Xpb3TB|q~(}}C4?XaJS"><field name="NUM">0</field></shadow></value><next><block type="variables_set" id=")^RjCmy%RWGXG7LE%,:C"><field name="VAR" id="x[^}fHMI{mGwo-0FCN%c">projectileInterval</field><value name="VALUE"><shadow type="math_number" id="7_?chM*e0,f`bChsqXok"><field name="NUM">3000</field></shadow></value></block></next></block></next></block></next></block></next></block></next></block></next></block></statement></block><block type="gameinterval" id="s]V-]YkL6O.BGhO?i-m$" x="590" y="0"><value name="period"><shadow type="timePicker" id="fK34n09z}Cw).-5/TaM%"><field name="ms">2000</field></shadow></value><statement name="HANDLER"><block type="controls_if" id="*4[%,p*Y7Z$)kK*D-xkm"><mutation else="1"/><value name="IF0"><shadow type="logic_boolean"><field name="BOOL">TRUE</field></shadow><block type="variables_get" id="yu~+]$`^KXdZWd7*y@Xr"><field name="VAR" id="LbKN{v#FtyN(nxD]=Y[-">orangeStart</field></block></value><statement name="DO0"><block type="variables_set" id="~_+nC|R8|x4~p@wAgEK="><field name="VAR" id="})[r|A=%,.NMOZRGM`iE">jedlo</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="vTI=nBB@l+5vSqlC[0$7"><value name="img"><shadow type="screen_image_picker" id="cF:pX/@O4Bcdy=5k#uY}"><field name="img">img`
+. . . . . . b b b b . . . . . . 
+. . . . . . b 4 4 4 b . . . . . 
+. . . . . . b b 4 4 4 b . . . . 
+. . . . . b 4 b b b 4 4 b . . . 
+. . . . b d 5 5 5 4 b 4 4 b . . 
+. . . . b 3 2 3 5 5 4 e 4 4 b . 
+. . . b d 2 2 2 5 7 5 4 e 4 4 e 
+. . . b 5 3 2 3 5 5 5 5 e e e e 
+. . b d 7 5 5 5 3 2 3 5 5 e e e 
+. . b 5 5 5 5 5 2 2 2 5 5 d e e 
+. b 3 2 3 5 7 5 3 2 3 5 d d e 4 
+. b 2 2 2 5 5 5 5 5 5 d d e 4 . 
+b d 3 2 d 5 5 5 d d d 4 4 . . . 
+b 5 5 5 5 d d 4 4 4 4 . . . . . 
+4 d d d 4 4 4 . . . . . . . . . 
+4 4 4 4 . . . . . . . . . . . . 
+`</field><data>{"commentRefs":[],"fieldData":{"img":"myImages.image13"}}</data></shadow></value><value name="kind"><shadow type="spritekind" id="A5W,Rg*.Mf+Gdeb-JF}r"><field name="MEMBER">Food</field></shadow></value></block></value><next><block type="spritesetvel" id="@TFGcKsDC.TXFH(6EL$h"><value name="sprite"><block type="variables_get" id="0it@qV,6BX+0XB.c_o9I"><field name="VAR" id="})[r|A=%,.NMOZRGM`iE">jedlo</field></block></value><value name="vx"><shadow type="spriteSpeedPicker" id="CD%/T;#s=sFWL9pT*}(E"><field name="speed">0</field></shadow></value><value name="vy"><shadow type="spriteSpeedPicker" id=".FoNwif_eM@k}V}35@S@"><field name="speed">100</field></shadow></value><next><block type="spritesetpos" id="G_Nkx|kd!unfG|E{^,IF"><value name="sprite"><block type="variables_get" id="[lt$}snD+{6*]r@xXFn8"><field name="VAR" id="})[r|A=%,.NMOZRGM`iE">jedlo</field></block></value><value name="x"><shadow type="positionPicker"/><block type="device_random" id="7P?S`z!nKwD:Y?ewC#6^"><value name="min"><shadow type="math_number" id="n?d$pdZwXLy0O=3~@nQt"><field name="NUM">0</field></shadow></value><value name="limit"><block type="scenescreenwidth" id="$,kjQ^6:;==)p?ch4V@L"/></value></block></value><value name="y"><shadow type="positionPicker" id="jX%|B0u+!G5/ciIn6xnD"><field name="index">0</field></shadow></value></block></next></block></next></block></statement><statement name="ELSE"><block type="variables_set" id="?4%@ojM5r#=LXxx3)7t:"><field name="VAR" id="LbKN{v#FtyN(nxD]=Y[-">orangeStart</field><value name="VALUE"><shadow type="math_number" id="Ir!0EDs_8}2--]XdN]4-"><field name="NUM">1</field></shadow></value></block></statement></block></statement></block><block type="gameinterval" id="CtU2%q+u/]sn!#YNBfWW" x="1434" y="0"><value name="period"><shadow type="timePicker" id="|O:0-o+5891M%0a[smN^"><field name="ms">5000</field></shadow></value><statement name="HANDLER"><block type="controls_if" id="ilfcX(`sZOipjy.%?y|]"><mutation else="1"/><value name="IF0"><shadow type="logic_boolean"><field name="BOOL">TRUE</field></shadow><block type="variables_get" id="kuDGYkVPPh(ux!:746/{"><field name="VAR" id="@k1(z7+QMZsQ8kCnR`6Z">brownStart</field></block></value><statement name="DO0"><block type="variables_set" id="T4l2CjYLg1,{dTTK.@!%"><field name="VAR" id="G+YTE6^^mW,pi$M]*MI9">jedlo2</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="D5MHgwm?Tkh@}`ZPYLUY"><value name="img"><shadow type="screen_image_picker" id="2a0Kj_s0ck8x_kc`VE]k"><field name="img">img`
+. . . . . . . . . . . 6 6 6 6 6 
+. . . . . . . . . 6 6 7 7 7 7 8 
+. . . . . . 8 8 8 7 7 8 8 6 8 8 
+. . e e e e c 6 6 8 8 . 8 7 8 . 
+. e 2 5 4 2 e c 8 . . . 6 7 8 . 
+e 2 4 2 2 2 2 2 c . . . 6 7 8 . 
+e 2 2 2 2 2 2 2 c . . . 8 6 8 . 
+e 2 e e 2 2 2 2 e e e e c 6 8 . 
+c 2 e e 2 2 2 2 e 2 5 4 2 c 8 . 
+. c 2 e e e 2 e 2 4 2 2 2 2 c . 
+. . c 2 2 2 e e 2 2 2 2 2 2 2 e 
+. . . e c c e c 2 2 2 2 2 2 2 e 
+. . . . . . . c 2 e e 2 2 e 2 c 
+. . . . . . . c e e e e e e 2 c 
+. . . . . . . . c e 2 2 2 2 c . 
+. . . . . . . . . c c c c c . . 
+`</field><data>{"commentRefs":[],"fieldData":{"img":"myImages.image11"}}</data></shadow></value><value name="kind"><shadow type="spritekind" id="q4IK#4h}#J^HkJU3[Tj2"><field name="MEMBER">Food</field></shadow></value></block></value><next><block type="spritesetvel" id="qttb(b=LTv@2--*}V~{I"><value name="sprite"><block type="variables_get" id="_.a3B%yXW~T3x=pQ2F;x"><field name="VAR" id="G+YTE6^^mW,pi$M]*MI9">jedlo2</field></block></value><value name="vx"><shadow type="spriteSpeedPicker" id="EYZg,m-vvxWM3EReOaC:"><field name="speed">0</field></shadow></value><value name="vy"><shadow type="spriteSpeedPicker" id="1pv96Eu0h:Js|8plXLcX"><field name="speed">100</field></shadow></value><next><block type="spritesetpos" id="id)mC~oeGFu0VJ61nEQ@"><value name="sprite"><block type="variables_get" id="@kPi|Ry%I]10Cak1#~:C"><field name="VAR" id="G+YTE6^^mW,pi$M]*MI9">jedlo2</field></block></value><value name="x"><shadow type="positionPicker"/><block type="device_random" id="!:m3mc%XwZgr6zmsxc?~"><value name="min"><shadow type="math_number" id="2WtIO%*gCQ@CHU{tD[jl"><field name="NUM">0</field></shadow></value><value name="limit"><block type="scenescreenwidth" id="aD64f7s%-%bc@w2rKVWS"/></value></block></value><value name="y"><shadow type="positionPicker" id="K_mH2~%a{f#P?r~RN.2B"><field name="index">0</field></shadow></value></block></next></block></next></block></statement><statement name="ELSE"><block type="variables_set" id="V2zVn9^RG=cY}QO:zE]$"><field name="VAR" id="@k1(z7+QMZsQ8kCnR`6Z">brownStart</field><value name="VALUE"><shadow type="math_number" id="J3M5JHLC9l)?(8Rk2+j0"><field name="NUM">1</field></shadow></value></block></statement></block></statement></block><block type="gameinterval" id="W9iddLv4Mc7_j]ByPk;m" x="2287" y="0"><value name="period"><shadow type="timePicker" id="6pgXdEY96WODa{3*L~i2"><field name="ms">9000</field></shadow></value><statement name="HANDLER"><block type="controls_if" id="MN#i-EcE7Wr(@2R%%_Ea"><mutation else="1"/><value name="IF0"><shadow type="logic_boolean"><field name="BOOL">TRUE</field></shadow><block type="variables_get" id="G$FawwXUvWofSe#F19`9"><field name="VAR" id="Sme|vL=l~~Ws+yA$bL^U">zmesStart</field></block></value><statement name="DO0"><block type="variables_set" id=".wva)/HDHhIT+-wnwnrO"><field name="VAR" id=";8x,yEy.|O:iy)BB=aS(">zelenina</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="#6?ilXnG4qJv=xJ$tX+p"><value name="img"><shadow type="screen_image_picker" id="4*Gwi7p(uZwdRFQ+m~[M"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+7 . . . . . . . . . . . . . . . 
+7 7 . . 1 . . . . . . . . . . . 
+7 7 2 . . . . . . . . . . . . . 
+7 7 2 2 . . . . . . . 1 . . . . 
+7 7 f 2 2 2 . . . . . . . . . . 
+7 7 2 2 f 2 f . . . . . . . . . 
+7 7 2 2 2 2 2 2 . . . . . 1 . . 
+7 7 2 f 2 2 f 2 2 . . . . . . . 
+7 7 2 2 2 2 2 2 2 2 . . . . . . 
+7 7 7 2 2 2 2 2 f 2 f . . . . . 
+7 7 7 2 f 2 f 2 2 2 2 2 2 . . . 
+. 7 7 7 2 2 2 2 2 f 2 f 2 2 . . 
+. . 7 7 7 2 2 f 2 2 2 2 2 f 2 . 
+. . . 7 7 7 7 7 7 7 7 7 7 7 7 7 
+. . . . 7 7 7 7 7 7 7 7 7 7 7 7 
+`</field><data>{"commentRefs":[],"fieldData":{"img":"myImages.image12"}}</data></shadow></value><value name="kind"><shadow type="spritekind" id="a!u,[`Ad8A{i*/zr7y/="><field name="MEMBER">Food</field></shadow></value></block></value><next><block type="spritesetvel" id="5l7R-gUW:d]=@_am@6gD"><value name="sprite"><block type="variables_get" id="8Pb_$*.))dZ|vgkPZ|0]"><field name="VAR" id=";8x,yEy.|O:iy)BB=aS(">zelenina</field></block></value><value name="vx"><shadow type="spriteSpeedPicker" id="y1c7#Zi?4H!R!BU~$@!6"><field name="speed">0</field></shadow></value><value name="vy"><shadow type="spriteSpeedPicker" id="dByI?%ID6**E!M%-,?c="><field name="speed">100</field></shadow></value><next><block type="spritesetpos" id="t?A*_.^aE`U1LbY}xAR:"><value name="sprite"><block type="variables_get" id="za/~s2KQ!z[Pw$+~|.SX"><field name="VAR" id=";8x,yEy.|O:iy)BB=aS(">zelenina</field></block></value><value name="x"><shadow type="positionPicker"/><block type="device_random" id="x-e$GYr7#uiITMW?(.=K"><value name="min"><shadow type="math_number" id="S0[g2}^=Lra5KhWp`hx%"><field name="NUM">0</field></shadow></value><value name="limit"><block type="scenescreenwidth" id="6INA|yA-j^%O5fF,Niqb"/></value></block></value><value name="y"><shadow type="positionPicker" id="]q%x-w@5{^#Rm;s_Z+.Z"><field name="index">0</field></shadow></value></block></next></block></next></block></statement><statement name="ELSE"><block type="variables_set" id="rZn=YrKsOC24eH3Quu?]"><field name="VAR" id="Sme|vL=l~~Ws+yA$bL^U">zmesStart</field><value name="VALUE"><shadow type="math_number" id="QRTLke@w4oK^!fXV3m=+"><field name="NUM">1</field></shadow></value></block></statement></block></statement></block><block type="gameupdate" id="x@:T;Aj#*nCp@V0hi0dg" x="0" y="497"><statement name="HANDLER"><block type="controls_if" id="0%F+Zhm?D(cG@ssU(3KI"><value name="IF0"><shadow type="logic_boolean"><field name="BOOL">TRUE</field></shadow><block type="logic_compare" id="01thYB(_inid:0}j[;jI"><field name="OP">GTE</field><value name="A"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="math_arithmetic" id="mP9uKd%!_^*|EC:0rA+*"><field name="OP">MINUS</field><value name="A"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="arcade_game_runtime" id="PRf$g9WD)Z`4tBCEAfp/"/></value><value name="B"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="variables_get" id="=)E(2UA7[m(Ta=_K4YwT"><field name="VAR" id="a/Oepjj]1%W}T2y30H%@">projectileMillis</field></block></value></block></value><value name="B"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="variables_get" id="F@:ZB[t2|tz0(}-mapD;"><field name="VAR" id="x[^}fHMI{mGwo-0FCN%c">projectileInterval</field></block></value></block></value><statement name="DO0"><block type="controls_if" id="+y=!}5Jan%R:vmkbZ}ll"><mutation else="1"/><value name="IF0"><shadow type="logic_boolean"><field name="BOOL">TRUE</field></shadow><block type="variables_get" id="e`}Pgf4/^yjwfuT2b,pU"><field name="VAR" id="UydDh-:jMNiLZ*`ww2nb">blueStart</field></block></value><statement name="DO0"><block type="variables_set" id="aMszprDF^|!f,r%u$):_"><field name="VAR" id="vV$_iq8YMkevE)qdp0=t">odpad</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="yl0KwS1QDW`4:`hI3hpe"><value name="img"><shadow type="screen_image_picker" id="8l2x9[w59TV?FeU`t2w6"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . d . . . 
+. . . . . . . . . . . d . . . . 
+. . . . . . . . . . . . d . . . 
+. . . . . . . . . . . d . . . . 
+. . . . . . . . . . . . d . . . 
+. 2 2 2 1 1 1 1 1 1 1 1 4 . . . 
+. 2 2 2 1 1 1 1 1 1 1 1 4 . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field><data>{"commentRefs":[],"fieldData":{"img":"myImages.image15"}}</data></shadow></value><value name="kind"><shadow type="spritekind" id="Cw_*o?YIHGEwt|HKyk5j"><field name="MEMBER">Projectile</field></shadow></value></block></value><next><block type="spritesetvel" id="CR/WaZ*~HU]gbOW*3jW3"><value name="sprite"><block type="variables_get" id=":1%uei0AQ*iJD8jCZr(G"><field name="VAR" id="vV$_iq8YMkevE)qdp0=t">odpad</field></block></value><value name="vx"><shadow type="spriteSpeedPicker" id="k$*V]td*9=_odqF4O}WX"><field name="speed">0</field></shadow></value><value name="vy"><shadow type="spriteSpeedPicker" id="0a}CpfzY0Do9m=(+s{1="><field name="speed">63</field></shadow></value><next><block type="spritesetpos" id="TIv5|WX3`Pt]G]J3FvpJ"><value name="sprite"><block type="variables_get" id="Wq.`=0,H:{i;6XpDo!56"><field name="VAR" id="vV$_iq8YMkevE)qdp0=t">odpad</field></block></value><value name="x"><shadow type="positionPicker"/><block type="device_random" id="zlw,8Ll+c0-E6%R8zkJ)"><value name="min"><shadow type="math_number" id="t0|CH(!{o!xl2)`/i]n;"><field name="NUM">0</field></shadow></value><value name="limit"><block type="scenescreenwidth" id="0B$2%DtK##VxHSOHAgfN"/></value></block></value><value name="y"><shadow type="positionPicker" id="=X9B;8RX5CidansX$-4n"><field name="index">0</field></shadow></value></block></next></block></next></block></statement><statement name="ELSE"><block type="variables_set" id="T`J`LyD7Z/emv9c$x3FL"><field name="VAR" id="UydDh-:jMNiLZ*`ww2nb">blueStart</field><value name="VALUE"><shadow type="math_number" id="{%Rk?h?lMJbK/6png%Z@"><field name="NUM">1</field></shadow></value></block></statement><next><block type="variables_set" id="XG#$2=f@{soIW|1w=lK)"><field name="VAR" id="a/Oepjj]1%W}T2y30H%@">projectileMillis</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="arcade_game_runtime" id="Kw/LJk_FpR:|X2R^eriI"/></value></block></next></block></statement></block></statement></block><block type="spritesoverlap" id="vw,niHsc+ArT/dxB}/_5" x="994" y="497"><value name="HANDLER_DRAG_PARAM_sprite"><shadow type="argument_reporter_custom" id="q|rtQb%q5q9#16fTIEma"><mutation typename="Sprite"/><field name="VALUE">sprite</field></shadow></value><value name="kind"><shadow type="spritekind" id="*kx46vRN*Vm~NI;5tem3"><field name="MEMBER">Projectile</field></shadow></value><value name="HANDLER_DRAG_PARAM_otherSprite"><shadow type="argument_reporter_custom" id="_/;k9]zpMR8%+sA]oMdx"><mutation typename="Sprite"/><field name="VALUE">otherSprite</field></shadow></value><value name="otherKind"><shadow type="spritekind" id="@Y4aRw1qT1z*R~f;?6Y!"><field name="MEMBER">Player</field></shadow></value><statement name="HANDLER"><block type="spritedestroy" id="^LQf!S=;#|UhJQ|NxOQf"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="false"></mutation><value name="sprite"><block type="variables_get" id="3M_TK!L8sWKJqeVkEbPr"><field name="VAR" id="vV$_iq8YMkevE)qdp0=t">odpad</field></block></value><next><block type="spritedestroy" id="j:[6V$*TT=]oy2fzo([W"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="false"></mutation><value name="sprite"><block type="argument_reporter_custom" id="s,4=9wL]bhE+.N#Q=kI@"><mutation typename="Sprite"/><field name="VALUE">sprite</field></block></value><next><block type="hudChangeLifeBy" id="NP4e00GW3/@[`!BZ_EgG"><value name="value"><shadow type="math_number" id="kTS,+QNQEicg^eEb0yA`"><field name="NUM">-1</field></shadow></value><next><block type="controls_if" id="EV#q4.^kX$224dfWh*TQ"><value name="IF0"><shadow type="logic_boolean"><field name="BOOL">TRUE</field></shadow><block type="logic_compare" id="yXzck:-dWUG:n$)})t$*"><field name="OP">LT</field><value name="A"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="hudLife" id="1f=c#KF5VNuzGE-jLW*%"/></value><value name="B"><shadow type="math_number" id="`}rt:_|`F!jQ;I03aC4!"><field name="NUM">1</field></shadow></value></block></value><statement name="DO0"><block type="gameOver" id="#b0J.zJz(~*p`nk7I6C{"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="false"></mutation><value name="win"><shadow type="toggleWinLose" id="q[EzG4XriJI2I$zzUk+_"><field name="win">false</field></shadow></value></block></statement></block></next></block></next></block></next></block></statement></block><block type="spritesoverlap" id="(sfake.(1}q1D?[5gF3-" x="1748" y="497"><value name="HANDLER_DRAG_PARAM_sprite"><shadow type="argument_reporter_custom" id="l--n^TT0;I*dvv98.F./"><mutation typename="Sprite"/><field name="VALUE">sprite</field></shadow></value><value name="kind"><shadow type="spritekind" id="qwkn(q=dhv#,QQWIUwh|"><field name="MEMBER">Player</field></shadow></value><value name="HANDLER_DRAG_PARAM_otherSprite"><shadow type="argument_reporter_custom" id="4{un0n3tA4yi@ED*0#tr"><mutation typename="Sprite"/><field name="VALUE">otherSprite</field></shadow></value><value name="otherKind"><shadow type="spritekind" id="B,qto|UTBB6uZ%?K92SJ"><field name="MEMBER">Food</field></shadow></value><statement name="HANDLER"><block type="spritedestroy" id="[([8LWnpai(yJ@0z+9WQ"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="2" _input_init="true"></mutation><field name="effect">effects.fire</field><value name="sprite"><block type="argument_reporter_custom" id="%v@*Ra@m-/N3C$z0sgKS"><mutation typename="Sprite"/><field name="VALUE">otherSprite</field></block></value><value name="duration"><shadow type="timePicker" id="Uks|ypu=*`m,lzxU4~K$"><field name="ms">100</field></shadow></value><next><block type="hudChangeScoreBy" id="}/Gp%7akCyg4R/u*St(y"><value name="value"><shadow type="math_number" id="~D-`({zff7+]Dy!jBL[^"><field name="NUM">1</field></shadow></value><next><block type="controls_if" id="5NQh%g)1}MvA+/*=BI%Z"><mutation elseif="3"/><value name="IF0"><shadow type="logic_boolean"><field name="BOOL">TRUE</field></shadow><block type="logic_compare" id="}nvo`DU$IwxcetUaQy{Z"><field name="OP">EQ</field><value name="A"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="hudScore" id="@}w1fOIIi:}qQrx9/S~,"/></value><value name="B"><shadow type="math_number" id=".Oh2ANlTx_H|W^,?{e-I"><field name="NUM">20</field></shadow></value></block></value><statement name="DO0"><block type="mixer_play_sound" id="9ZE?Vq-HFA[G{]IBwE4Y"><field name="sound">music.powerUp</field><next><block type="game_show_long_text" id="O$2_@CTIMsUUQAnsSJX["><field name="layout">DialogLayout.Center</field><value name="str"><shadow type="text" id="K7JuW!`JXM8N!W*Q^g67"><field name="TEXT">Level 1 !!!</field></shadow></value><next><block type="gamesetbackgroundimage" id="~C9z,5j.{r?GDZZmKv*C"><value name="img"><shadow type="background_image_picker" id="@iiu?PK)F[*`*y;kgk#x"><field name="img">img`
+9999999999999999999999999999999999999999999999999fffffff99999999999999999999999999999999999999999999999999999999999999555555555555555555555555555555555555555555
+99999999999999999999999999999999999999999ffffffff999999999999999999999999999999999999999911999999999999999999999999999555555555555555555555555555555555555555555
+9999999999999999999999999999fffffffffffff99999999999999999999999999999999999999999999111199999999999999999999999999999555555555555555555555555555555555555555555
+99999999999999ffffffffffffff999f9f999999999999999999999999999999999999999999999999911111111111999999999999999999999999555555555555555555555555555555555555555555
+9999999fffffff99999999999999999f9f999999999999999999999999999999999999999999999999111111111111111199999999999999999999555555555555555555555555555555555555555555
+999999999999999999999fffffffffffffffffffff9999999999999999999999999999999999999999111111111111111111119999999999999999555555555555555555555555555555555555555555
+99999999999999999999ff111111111111f8888888f999999999999999999999999999999999999999911111111111111111111199999999999999555555555555555555555555555555555555555555
+9999999999999999999ff1111221111111f88888888f99999999999999999999999999999999999999911111111111111111111111999999999999555555555555555555555555555555555555555555
+9999999999999999999f11111221111111f88888888f99999999999111111111111999999999999999911111111111111111111111999999999999555555555555555555555555555555555555555555
+999999999999999999ff11122222211111f88888888fff999999999111111111111111111119999999911111111111111111111119999999999999555555555555555555555555555555555555555555
+99999999999999999ff111122222211111f888888888ffff9999999111111111111111111111999999991111111111111111111199999999999999955555555555555555555555555555555555555555
+9999999999999fffff1111111221111111f88888888ff11ff999999911111111111111111111119999991111111111111111999999999999999999955555555555555555555555555555555555555555
+fffffffffffff1111111111112211111111ffffffff11111ff99999991111111111111111111111999999911111111199999999999999999999999955555555555555555555555555555555555555555
+1111111111111111111111111111111111111111111111111f99999999991111111111111111199999999999999999999999999999999999999999995555555555555555555555555555555555555555
+1111111111111111111111111111111111111111111111111f99999999999111111111111199999999999999999999999999999999999999999999995555555555555555555555555555555555555555
+ffffffffffffffffffffffff111111111111111111111111ff99999999999999999999999999999999999999999999999999999999999999999999999555555555555555555555555555555555555555
+999999999999999999999999ff1111111111111111111111f999999999999999999999999999999999999999999999999999999999999999999999999955555555555555555555555555555555555559
+9999999999999999999999999ffff11111fff111111111ff9999999999999999999999999999999999999999999999999999999999999999999999999955555555555555555555555555555555555559
+9999999999999999999999999999fffffff99ffffffffff99999999999999999999999999999999999999999999999999999999999999999999999999995555555555555555555555555555555555599
+99999999999999999999999999999f999999999f999999999999999999999999999999999999999999999999999999999999999999999999999999999999555555555555555555555555555555555999
+99999991111111111999999999999f999999999f999f99999999999999999999999999999999999999999999999999999999999999999999999999999999955555555555555555555555555555559999
+999911111111111111199999999ffffffffffffffff999999999999999999999999999999999999999999999999f99999999999999999999999999999999995555555555555555555555555555599999
+99999111111111111111999999999f999999999f9f999999999999999999999999999999999999999999999999ff99999999999999999999999999999999999955555555555555555555555559999999
+99991111111111111111199999ffffffffffffffff99999999999999999999999999999999999999999999999f44f9999999999999999999999999999999999995555555555555555555555599999999
+9991111111111111111119999999999999999999999999999999999999999999999999999999999999999999f4444f999999999999999999999999999999999999955555555555555555559999999999
+999911111111111111111999999999999999999999999999999999999999999999999999999999999999999f444444f99999999999999999999999999999999999999955555555555559999999999999
+999911111111111111119999999999999999999999999999999999999999999999999999999999999999999f444444f99999999999999999999999999999999999999999999999999999999999999999
+99991111111111111119999999999999999999999999999999999999999999999999999999999999999999f44444444f9999999999999999999999999999999999999999999999999999999999999999
+9999111111111999999999999999999999999999999999999999999999999999999999999999999999999f4444444444f999999999999999999999999999999999999999999999999999999999999999
+999999999999999999999999999999999999999999999999999999999999999999999999999999999999f444444444444f99999999999999999999999999999999999999999999999999999999999999
+99999999999999999999999999999999999999999999999999999999999999999999999999999999999f44444444444444f9999999999999999999999999999999911111199999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999f4444444444444444f999999999999999999999999999991111111111111111111999999999999
+999999999999999999999999999999999999999999999999999999999999999999999999999999999f444444444444444444f99999999999999999999999999111111111111111111111199999999999
+99999999999999999999999999999999999999999999999999999999999999999999999999999999f4444444444444444444f99999999999999999999999991111111111111111111111119999999999
+99999999999999999999999999999999999999999999999999999999999999999999999999999999f44444444444444444444f9999999999999999999999911111111111111111111111111999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999f4444444444444444444444f999999999999999999999911111111111111111111111111999999999
+999999999999999999999999999999999999999999999999999999999999999999999999999999f444444444444444444444444f99999999999999999999911111111111111111111111111199999999
+99999999999999999999999999999999999999999999999999999999999999999999999999999f44444444444444444444444444f9999999999999999999991111111111111111111111111199999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999f4444444444444444444444444444f999999999999999999999111111111111111111111999999999999
+999999999999999999999999999999999999999999999999999999999999999999999999999f444444444444444444444444444444f99999999999999999999991111111111111199999999999999999
+99999999999999999999999999999999999999999999999999999999999999999999999999f44444444444444444444444444444444f9999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999f444444444444444444444444444444444f9999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999f4444444444444444444444444444444444f999999999999999999999999999999999999999999999999999
+999999999999999999999999999999999999999999999999999999999999999999999999f444444444444444444444444444444444444f99999999999999999999999999999999999999999999999999
+99999999999999999999999999999999999999999999f99999999999999999999999999f44444444444444444444444444444444444444f9999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999f4f999999999999999999999999f4444444444444444444444444444444444444444f999999999999999999999999999999999999999999999999
+999999999999999999999999999999999999999999f44f99999999999999999999999f444444444444444444444444444444444444444444f99999999999999999999999999999999999999999999999
+999999999999999999999999999999999999999999f444f999999999999999999999f44444444444444444444444444444444444444444444f9999999999999999999999999999999999999999999999
+99999999999999999999999999999999999999999f4444f99999999999999999999f4444444444444444444444444444444444444444444444f999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999f444444f999999999999999999f44444444444444444444444444444444444444444444444f999999999999999999999999999999999999999999999
+999999999999999999999999999999999999999f44444444f99999999999999999f444444444444444444444444444444444444444444444444f99999999999999999999999999999999999999999999
+99999999999999999999999999999999999999f444444444f9999999999999999f44444444444444444444444444444444444444444444444444f9999999999999999999999999999999999999999999
+9999999999999999999999999999999999999f44444444444f99999999999999f4444444444444444444444444444444444444444444444444444f999999999999999999999999999999999999999999
+9999999999999999999999999999999999999f444444444444f999999999999f444444444444444444444444444444444444444444444444444444f99999999999999999999999999999999999999999
+999999999999999999999999999999999999f44444444444444f9999999999f44444444444444444444444444f44444444444444444444444444444f9999999999999999999999999999999999999999
+99999999999999999999999999999999999f444444444444444f999999999f44444444444444444444444444f4f44444444444444444444444444444f999999999999999999999999999999999999999
+9999999999999999999999999999999999f44444444444444444f9999999f44444444444444444444444444f444f4444444444444444444444444444f999999999999999999999999999999999999999
+999999999999999999999999999999999f4444444444444444444f99999f44444444444444444444444444f44444f4444444444444444444444444444f99999999999999999999999999999999999999
+99999999999999999999999999999999f44444444444444444444f99999f44444444444444444444444444f444444f4444444444444444444444444444f9999999999999999999999999999999999999
+99999999999999999999999999999999f444444444444444444444f999f44444444444444444444444444f44444444f4444444444444444444444444444f999999999999999999999999999999999999
+9999999999999999999999999999999f44444444444444444444444f9f44444444444444444444444444f444444444f44444444444444444444444444444f99999999999999999999999999999999999
+999999999999999999999999999999f4444444444444444444444444f44444444444444444444444444f44444444444f44444444444444444444444444444f9999999999999999999999999999999999
+99999999999999999999999999999f44444444444444444444444444f4444444444444444444444444f4444444444444f44444444444444444444444444444f999999999999999999999999999999999
+9999999999999999999999999999f4444444444444444444444444444f44444444444444444444444f444444444444444f44444444444444444444444444444f99999999999999999999999999999999
+999999999999999999999999999f444444444444444444444444444444f4444444444444444444444f4444444444444444f4444444444444444444444444444f99999999999999999999999999999999
+999999999999999999999999999f444444444444444444444444444444f444444444444444444444f444444444444444444f4444444444444444444444444444f9999999999999999999999999999999
+99999999999999999999999999f44444444444444444444444444444444f4444444444444444444f44444444444444444444f4444444444444444444444444444f999999999999999999999999999999
+9999999999999999999999999f4444444444444444444444444444444444f44444444444444444f4444444444444444444444f4444444444444444444444444444f99999999999999999999999999999
+999999999999999999999999f444444444444444444444444444444444444f444444444444444f444444444444444444444444f4444444444444444444444444444f9999999999999999999999999999
+99999999999999999999999f4444444444444444444444444444444444444f44444444444444f44444444444444444444444444f4444444444444444444444444444f999999999999999999999999999
+99999999999999999999999f44444444444444444444444444444444444444f4444444444444f444444444444444444444444444f4444444444444444444444444444f99999999999999999999999999
+9999999999999999999999f4444444444444444444444444444444444444444f44444444444f4444444444444444444444444444f4444444444444444444444444444f99999999999999999999999999
+999999999999999999999f44444444444444444444444444444444444444444f4444444444f444444444444444444444444444444f4444444444444444444444444444f9999999999999999999999999
+99999999999999999999f4444444444444444444444444444444444444444444f44444444f44444444444444444444444444444444f4444444444444444444444444444f999999999999999999999999
+9999999999999999999f444444444444444444444444444444444444444444444f444444f4444444444444444444444444444444444f4444444444444444444444444444f99999999999999999999999
+999999999999999999f4444444444444444444444444444444444444444444444f44444f444444444444444444444444444444444444f4444444444444444444444444444f9999999999999999999999
+999999999999999999f44444444444444444444444444444444444444444444444f4444f4444444444444444444444444444444444444f4444444444444444444444444444f999999999999999999999
+99999999999999999f4444444444444444444444444444444444444444444444444f44f444444444444444444444444444444444444444f4444444444444444444444444444f99999999999999999999
+9999999999999999f444444444444444444444444444444444444444444444444444ff44444444444444444444444444444444444444444f4444444444444444444444444444f9999999999999999999
+999999999999999f4444444444444444444444444444444444444444444444444444f4444444444444444444444444444444444444444444f444444444444444444444444444f9999999999999999999
+99999999999999f4444444444444444444444444444444444444444444444444444f444444444444444444444444444444444444444444444f444444444444444444444444444f999999999999999999
+9999999999999f4444444444444444444444444444444444444444444444444444f4444444444444444444444444444444444444444444444f4444444444444444444444444444f99999999999999999
+9999999999999f444444444444444444444444444444444444444444444444444f444444444444444444444444444444444444444444444444f4444444444444444444444444444f9999999999999999
+999999999999f4444444444444444444444444444444444444444444444444444f4444444444444444444444444444444444444444444444444f4444444444444444444444444444f999999999999999
+99999999999f4444444444444444444444444444444444444444444444444444f444444444444444444444444444444444444444444444444444f4444444444444444444444444444f99999999999999
+9999999999f4444444444444444444444444444444444444444444444444444f44444444444444444444444444444444444444444444444444444f4444444444444444444444444444f9999999999999
+999999999f4444444444444444444444444444444444444444444444444444f4444444444444444444444444444444444444444444444444444444f4444444444444444444444444444f999999999999
+99999999f4444444444444444444444444444444444444444444444444444f444444444444444444444444444444444444444444444444444444444f444444444444444444444444444f999999999999
+99999999f444444444444444444444444444444444444444444444444444f44444444444444444444444444444444444444444444444444444444444f444444444444444444444444444f99999999999
+9999999f4444444444444444444444444444444444444444444444444444f444444444444444444444444444444444444444444444444444444444444f444444444444444444444444444f9999999999
+999999f4444444444444444444444444444444444444444444444444444f44444444444444444444444444444444444444444444444444444444444444f444444444444444444444444444f999999999
+99999f4444444444444444444444444444444444444444444444444444f4444444444444444444444444444444444444444444444444444444444444444f444444444444444444444444444f99999999
+9999f4444444444444444444444444444444444444444444444444444f44444444444444444444444444444444444444444444444444444444444444444f4444444444444444444444444444f9999999
+999f4444444444444444444444444444444444444444444444444444f4444444444444444444444444444444444444444444444444444444444444444444f4444444444444444444444444444f999999
+999f444444444444444444444444444444444444444444444444444f444444444444444444444444444444444444444444444444444444444444444444444f444444444444444444444444444f999999
+99f4444444444444444444444444444444444444444444444444444f4444444444444444444444444444444444444444444444444444444444444444444444f444444444444444444444444444f99999
+9f4444444444444444444444444444444444444444444444444444f444444444444444444444444444444444444444444444444444444444444444444444444f444444444444444444444444444f9999
+f4444444444444444444444444444444444444444444444444444f44444444444444444444444444444444444444444444444444444444444444444444444444f444444444444444444444444444f999
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd4dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+ddddddddddddd4dddddddddddddd4ddddddddddddddddddddddddddddddddddddddddddd4dddddddddddddddddddddddddddddddddddddddddddddddddd4dddddddddddddddddddddddddddddddddddd
+dddd4dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd4dddddddddddd4dddddddddddd4dddddddddddddddd4ddddddddddddddd4ddddddddddddd
+ddddddddddddddddddddddddddddddddddd4ddddddddd4ddddd4ddddddddddddddddddddddddddd4ddddddddddddddddddddddddddddddddddddddddddddddddddddddddd4ddddddddddddddddd4dddd
+dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddfffffffffffffffffffffffffffffdddddddddddddd
+dddddddd4ddddddddddd4dddddddddddddddddddddddddddddddddddddddddddddddd4dddddddddddddddddddddddddddddddddddddd4dddddddfdddddddddddddddddddddddddddddfddddddddddddd
+ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd4ddddddddddddddddddddddfdddffffddddddddddddffddddddddfddddddddddddd
+ddddddddddddddddddddddddddddddddddddddddddd4dddddddd4dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd4fddddddfffdddddddddffdddfffdddfddddddddddddd
+ddddddddddddddddddddddddddd4ddddddddddddddddddddddddddddddd4ddddddddddddddddddddddddddddddddddddddddddddddddddddddddfddddddddff4ddddddffdddfdddfddfddddddddddddd
+dddddddddddddddddddddddddddddddddddd4ddddddddddddddddddddddddddddddddddddddddddddddddddddd4dddddddddddddddddddddddddfdddddddddffffffffffffffdddfddfdd4dddddddddd
+ddddddddddddd4ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd4ddddddddddddddddfddddddddffdddddfddd4ddfdddfddfddddddddddddd
+ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddfdd4dddfffddddfffdddddddfffdddfddddddddddddd
+ddd4dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd4ddddddddddd4dddddddddddddddddddddddddddddddddddddfdddfffddddddffdddddddddddddddfddddddddddddd
+dddddddd4dddddddddddddd4dddddddddddddddddddddddddddd4ddddddddddddddddddddddddddddddddddddddddddddddddddddd4dddddddddfdddddddddddffdddddddddddddd4dfddddddddddddd
+ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddfdddddddddddddddddddddddddddddfddddddddddddd
+ddddddddddddddddddddddddddddddddddddd4dddddddddd4dddddddddd4ddddddddddddddddddddddd4dddddddddd4ddddddddddddddddddddddfffffffffffffffffffffffffffffdddddddd4ddddd
+dddddddddddddddddd4dddddddddddd4dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd4ddddddddddddd4ddddddddddddddddddddddddddd
+dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd4ddddddddddddddd4ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+`</field><data>{"commentRefs":[],"fieldData":{"img":"myImages.image1"}}</data></shadow></value><next><block type="variables_set" id="cR*tasYgoktsOO$?b*xc"><field name="VAR" id="x[^}fHMI{mGwo-0FCN%c">projectileInterval</field><value name="VALUE"><shadow type="math_number" id=":P.M5e7nf2E+J#Nbkyqq"><field name="NUM">2000</field></shadow></value></block></next></block></next></block></next></block></statement><value name="IF1"><shadow type="logic_boolean"><field name="BOOL">TRUE</field></shadow><block type="logic_compare" id="=VPmopR32^KSHc_:}JvG"><field name="OP">EQ</field><value name="A"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="hudScore" id="Hv*N{5q#t*t`/n8]aSSw"/></value><value name="B"><shadow type="math_number" id="r]WZ/fi@?ua){gLcXU3k"><field name="NUM">40</field></shadow></value></block></value><statement name="DO1"><block type="mixer_play_sound" id="R3^Oa8db3vtt%K`NH,(V"><field name="sound">music.powerUp</field><next><block type="game_show_long_text" id="KK[x:WUt5jHza!8X|%Or"><field name="layout">DialogLayout.Center</field><value name="str"><shadow type="text" id="Nk^KeKbTPDH9m#khBd8@"><field name="TEXT">Level 2 !!!</field></shadow></value><next><block type="gamesetbackgroundimage" id="1(q8_me_0/9^;X#f/+T}"><value name="img"><shadow type="background_image_picker" id="i.!EJmMpI!hSv=_;=j?7"><field name="img">img`
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999922222222222999999999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999992222222222222222299999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999222222222222222222229999999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999992222222222226622222222299999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999922222222222226666622222229999999999999999999999999999999999999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999222222222222226666662222229999999999999999999999999999999999999999999999999999999999999999999999
+99999999999999999999999999999999999999999999999999999999999999992222ffff2222226666666622222999999999999999999999999999999999999999999999999999999999999999999999
+99999999999999999999999999999999999999999999999999999999999999922222ffff2222226666666662222999999999999999999999999999999999999999999999999999999999999999999999
+99999999999999999999999999999999999999999999999999999999999999922222ffff2222226666666666222999999999999999999999999999999999999999999999999999999999999999999999
+99999999999999999999999999999999999999999999999999999999999999222222ffff222222666666666622299999999999999999999999999999999999ccccc99999999999999999999999999999
+99999999999999999999999999999999999999999999999999999999999999222222ffff2222226666666666222299999999999999999999999999999999ccccc9999999999999999999999999999999
+99999999999999999999999999999999999999999999999999999999999999222222ffff22222266666666662222999999999999999999999999999cccccccc999999999999999999999999999999999
+99999999999999999999999999999999999999999999999999999999999999222222ffff22222266666666662222999999999999999999999999ccccccc9999999999999999999999999999999999999
+99999999999999999999999999999999999999999999999999999999999999222222ffff22222266666fff662222999999999999999999999cccccccac99999999999999999999999999999999999999
+9999999999999999999999999999999999999999999999999999999f999992222222ffff22222266666f9f662222999999999999999999cccccccaaaac99999999999999999999999999999999999999
+9999444444444444444444444444444449999999999999999999999f999992222222ffff22222266666fff662222999999999999999995999999caaaac999999cccccccccc99fffff999999999999999
+994466666644466666666644446666664499999999999999999f999f999992222222ffff2222226666666ff62222999999999999999955999999caaaac999999caaaaaaaacc9ffffff99999999999999
+944666666644466666666644446666666499999999999999999f9999999992222222ffff22222266666666ff2222999999999999999599999999caaaac999999caaaaaaaaaccffffff99999999999999
+446666666644466666666644446666666449999999999999999ff999999992222222ffff222222222222222222222ffff2222222299995559999caaaac999999caaaaaaaaaacffffff99999999999999
+46666666664446666666664444666fff66449999999999999999f999999992222222ffff22222222222222222222ffffff222222222999999999caaaaccccccccaaaaaaaaaaaafffff99999999999999
+66666666664446666666664444666f9f66649999999999999999999f999992222222ffff22222222222222222222222222222222555999559999caaaaaaaaaaaaaaaaaaaaaaaaaacc999999999999999
+66666666664446666666664444666fffff644999999999999999999f999992222222ffff22222222222222222222222222222222555599999999caaaaaaaaaaaaaaaaaaaaaaaaaaacccccccccccc9999
+666666666644466666666644446666666ff94499999999999999999f999992222222fffffffffffffffffffffffffff222222222555599599999caaaaa555555555555555aaaaaaaaaaaaaaaaaac5559
+66666666664446666666664444666666666ff499999999999559999f999992222222fffffffffffffffffffffffffff222222222555599955999caaaaaaaaaaaaaaaaaa55aaaaaaaaaaaaaaaaaaa5559
+44444444444444444444444444444444444444444444444955999999f99992222222fffffffffffffffffffffffffff222222222229999999999caaaaaaaaaaaaaaaa55aaaaaaaaaaaaaaaaaaaaa555c
+88888888888888888888888888888888888888888888855559999999999992222222fffffffffffffffffffffffffff222222222229999999999caaaaaaaaaaaa5555555aaaaaaaaaaaaaaaaaaaaaaaa
+88888884448888888888888888888888888888888888855555555999999992222222222222222222222222222222222222222222229999999999caaaaaaaccaaaaaaaaaa55555555555aaaaaaaaaaaaa
+888844449444488888888888444444888888888888888555599999999ffff2222222222222222222222222222222229222222222229999999999caaacccc9ccccaaaaaaaaaaaaaccccccaaaaaaaaaaaa
+888449999999448888888844999999448888888888888849559999999ffff2229999999222222222222222222299999999992222229999999999cacc99999999ccaaaaaaaaacccc9999ccaaaaaaaaaaa
+444999999999944888888849999999944488888888888849955999999ffff2999999999992222222222222222999999999999922229999999999ccc9999999999ccaaaaaaacc99999999ccccaaaaaaac
+99999999999999444444444999999999944888888888884999599999999999999999999992222222222222229999999999999992999999999999cc9999999999999cccccccc999999999999ccccccccc
+99999fffffff999999999999fffffff999444444444444499999999999999999fffffff9992222299999922999fffffff999999999999999999999999fffffff999999999999fffffff9999999999999
+9999fffffffff9999999999fffffffff9999999999999999999999999999999fffffffff99999999999999999fffffffff9999999999999999999999fffffffff9999999999fffffffff999999999999
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+dddfffffffffffddddddddfffffffffffdddddddddddddddddddddddddddddfffffffffffdddddddddddddddfffffffffffddddddddddddddddddddfffffffffffddddddddfffffffffffddddddddddd
+dddffff888ffffddddddddffff888ffffdddddddddddddddddddddddddddddfffffffffffdddddddddddddddfffffffffffddddddddddddddddddddffff555ffffddddddddffff555ffffddddddddddd
+dddffff888ffffddddddddffff888ffffdddddddddddddddddddddddddddddffffeeeffffdddddddddddddddffffeeeffffddddddddddddddddddddffff555ffffddddddddffff555ffffddddddddddd
+dddffff888ffffddddddddffff888ffffdddddddddddddddddddddddddddddffffeeeffffdddddddddddddddffffeeeffffddddddddddddddddddddffff555ffffddddddddffff555ffffddddddddddd
+dddfffffffffffddddddddfffffffffffdddddddddddddddddddddddddddddfffffffffffdddddddddddddddfffffffffffddddddddddddddddddddfffffffffffddddddddfffffffffffddddddddddd
+dddfffffffffffddddddddfffffffffffdddddddddddddddddddddddddddddfffffffffffdddddddddddddddfffffffffffddddddddddddddddddddfffffffffffddddddddfffffffffffddddddddddd
+ddddfffffffffddddddddddfffffffffdddddddddddddddddddddddddddddddfffffffffdddddddddddddddddfffffffffddddddddddddddddddddddfffffffffddddddddddfffffffffdddddddddddd
+dddddfffffffddddddddddddfffffffdddddddddddddddddddddddddddddddddfffffffdddddddddddddddddddfffffffddddddddddddddddddddddddfffffffddddddddddddfffffffddddddddddddd
+dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+ddddffffffffffffffffffffffdddddddddddddddfffffffffffffffffffffffdddddddddddddffffffffffffffffffffdddddddddddffffffffffffffffffddddddddddddfffffffffffffffffffffd
+dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+`</field><data>{"commentRefs":[],"fieldData":{"img":"myImages.image2"}}</data></shadow></value><next><block type="variables_set" id="OP-O`Z}g]ugc8-2l~YaJ"><field name="VAR" id="x[^}fHMI{mGwo-0FCN%c">projectileInterval</field><value name="VALUE"><shadow type="math_number" id="]`t_3W_bDCJ8rOv1Y,Fg"><field name="NUM">1000</field></shadow></value></block></next></block></next></block></next></block></statement><value name="IF2"><shadow type="logic_boolean"><field name="BOOL">TRUE</field></shadow><block type="logic_compare" id="@I`t2L|UhMC#j#SX?wy?"><field name="OP">EQ</field><value name="A"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="hudScore" id="y|UC3+X?5]3!*DqgcP4!"/></value><value name="B"><shadow type="math_number" id="r1?+]Yu.mEZSD5r~a@X9"><field name="NUM">60</field></shadow></value></block></value><statement name="DO2"><block type="mixer_play_sound" id="p;Dsq?slit_On@p6;5I~"><field name="sound">music.powerUp</field><next><block type="game_show_long_text" id="Hp3TqH_b$|0#8;1aJ]]7"><field name="layout">DialogLayout.Center</field><value name="str"><shadow type="text" id="5|ijyjdJ48P}PN;L_6;#"><field name="TEXT">Level 3 !!!</field></shadow></value><next><block type="gamesetbackgroundimage" id="1N5ziP*(mClls_Wm~H2$"><value name="img"><shadow type="background_image_picker" id="7srzsGRP!)AU*,(Zs_W1"><field name="img">img`
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999777799999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999777999999999999999999999999999999999999777799999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999777999999999999999999999999999999999997777999999999999999999
+9999999999999999999999999999999999999999999999996999999999999999999999999999999999999999999999999999777799999999999999999999999999999999997777999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999777799996999999999999999996999999999997779999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999777799999999777999999999999999999999977779999999999999999999
+9999996999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999777799999999777999999999999999999999977779999999999999999999
+9999999999999999999999999999999999999999999999999999999999999999999996999999999999999999999999969997777999999999777999999999999999999999977799999999997779999999
+9999999999999999999999999999999699999999999999999999999999999999999999999999999999969999999999999977777999999997777999999777999999999999977799999999997779996999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999977779999999997777999999777999999999999977799999999997779999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999777799999999977779999999777999999999999777799999999997779999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999777799999999777779999997777999999999999777799999999997779999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999777999999999777799999997777999999999999777999999999997779999999
+9999999999999999999999999999999999999999999999996999999999999999999999999999999999999999999999999777999999999777999999997779999999969999777999999999997779999999
+9999999999999999999699999999999999999999999999999999999999999999999999999999999999999999999999999777999999999777999999997779999999999999777999999999997779999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999777999999999777999999977779999999999999777999999999997779999999
+9999969999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999777999999999777999999777779999999999999777999999999997779999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999777999999999777999999777799999999999999777999999999997779999999
+9999999999999999999999999999999999999999996999999999999999969999999999999999999999999999999999999777799996999777999997777999999999999999777999999999997779999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999777799999999777999997777999999999999997777999999999997779999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999977779999999777999997779999999999999997777999999999997779999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999977779999999777999997779999999999999997779999999999977779999969
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999997779999999777999997779999999999999977779999999999977779999999
+9999999999999999999999999999999999969999999999999999999999999999999999999999999999999999999999999997777999999777999997777999999999997777779999999999977799999999
+9999999999999999999999999999999999999999999999999999999999999999999999999996999999699999999999999997777999999777999997777799999999777777799999999999977799999999
+9999999999999999999999999699999999999999999999999999999999999999999999999999999999999999999999999999777799999777999999777799999997777777999999999999977799999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999777799999777999999977779999777777799999999999999977799999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999977779999777999999977777997777779999999999999999977799999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999977779999777999999997777777777799999999999999999977799999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999997777999777999999999777777779999999996999999999977799999999
+9999999999999699999999999999999999999999999999999999999999999999999999999999999999999999999999999999997777999777999999999977777799999999999999999999777799999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999777999999999996999997777999999999999999999999777799999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999777799999999999999997777799999999999999999999777999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999777779999999999999999777799999999999999999999777999999999
+9999999999999999999999999999999999999999999999999999999999999999999699999999999999999999999999999999999977777799999999999999977779999999999999999999777999999999
+9999999999999999999999999999999999999999999999999999999969999999999999999999999999999999999999999999999997777777999999999999977777999999999999999997777999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999777777779999999999997777999999999999999997777999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999969999999999997777777799999999999777799999999999999997779999999999
+9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999977777777799999999777799999999999999997779999999999
+9999999999999999999999999999999999999999996999999999999999999999999999999999999999999999999999999999999999999999777777777777999977799999999999999997779999999999
+9999999999999999999999999999999996999999999999999999999999999999999999999999999999999999999999999999999999999999997777777777777777799999999999999997779999999999
+9999999999999999977799999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999997777777777777799999999996999997779999999699
+9999999999999999977799999999999999999999999999999999999999999999999999999999999999999999999999999999999999999996999999999977777777799999999999999997779999999999
+9999999999999999777799999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999977799999999999999997779999999999
+9999999999999999777799999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999977799999999999999997779999999999
+9999999999999997777999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999977799999999999999997779999999999
+9999996999999977777999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999977799999999999999997779999999999
+9999999999999977779999999999999999999999999999996999999999999999999999999999999999999999999999999999999999999999999999999999999977799999999999999997779999999999
+9999999999999777799999999777999999999999999999999999999999999999999999999999999999999996999999999999999999999999999999999999999977799999999999999997779999999999
+9999999999999777799999997777999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999977799999999999999997779999999999
+9999999999997777999999997777999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999977799999999999999977779999999999
+9999999999997777999999997779999999999999977799999999999999969999999999999999999999999999999999999999999999999999999999999999999777799999999999999977779999999999
+9999999999997779999999997779999999999999777799999999999999999999999999999999999999999999999999999999999999999999999999999999999777799999999999999977799999999999
+9999999999997779999999997779999999999999777799999999999999999999999999999999999999999999999999999699999999999999999999999999999777999999999999999977799999999999
+9999999999977779999999997777999999999997777999999999999999999999999999999999999999999999999999999999999999999999999999999996999777999999999699999777799999999999
+9999999999977779999999997777999999999977777999999999999999999999999999999999999999999999999999999999999999999999999999999999997777999999999999999777799999999999
+9999999999977799999999999777999999999777779999999999999999999999999999999999999999999999999999999999999999999999999999999999997777999999999999999777999999999999
+9999999999977799999999999777999999999777799999999999999999999999999999999999999999999999999999999999999999999999999999999999997779999999999999999777999999999999
+9999999999977799999999999777999999997777999999999999999999999999999999969999999999999999999999999999999999999996999999999999977779999999999999999777999999999999
+9999999999977799999999999777799999977777999999999999999999999999999999999999999999999999999999999999999999999999999999999999977779999999999999997777999999999999
+9999999999977779999999999777799997777779999999999999999999999999999999999999999999999999999999999999999999999999999999999999777799999999999999977777999999999999
+9999999999977779999999999977799777777799999996999999999999999999999999999999999999999999999999999999999999999999999999999999777799999999999999977779999999999999
+9999999999997779999977777777777777777999999999999999999999999999999999999999999999999999999999999999999999999999999999999997777999999999999999777799999999999999
+9999996999997779997777777777777777799999999999999999999999999999999999999999999999999999999999999999999999999999999999999997777999999999999977777799999996999999
+9999999999997777977777777777777779999999999999999999999999999999999999999999999999999999999999999999999999999999999999999977779999999999999777777999999999999999
+9999999999997777777777999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999977779999999999777777779999999999999999
+9999999999999777777799999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999777799999999777777777999999999999999999
+9999999999999977777999999999999999999999999999999999999999999999999999999999999999999996999999999999999999969999999999999777799999977777777779999999999999999999
+9999999999999977777999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999997777999977777777779999999999999999999999
+9999999999999997777799999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999997777997777777779999999999999999999999999
+9999999999999999777799999999999999999999996999999999999999996999999999999999999999999999999999999999999999999999999999977779997777777999999999999999999999999999
+9999999999999999977779999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999977779997777999999999999999999999999999999
+9999999999999999977777999999999999999999999999999999999999999999999999999999999999999999999999999699999999999999999999977799999999999999999999999999999999999999
+9999999777777999997777799999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999977799999999999999999999999999999999999999
+9999999777777779999777799999999999999999999999999999999999999999999999977799999999999999999999999999999999999999999999777799999999999999999999999999999999999999
+9999999777777777999977799999999999999999999999999999999999999999999999977779999999999999999999999999999999999999999999777799999999999999999999999999999999999999
+9999999999977777777777779999999999999999999999999999999999999999999999977779999999999999999999999999999999999999999999777999999999999999999999999999999999999999
+9999999999999777777777779999999999999999999999999999999999999999999999997777999999999999999999999999999999999999999999777999999999999999999999999999999999969999
+9999999999999777777777779999999999999999999999999999999999999999999999997777999999999999977799999999999999999999999999777999999999999999999999999999999999999999
+9999999999999977777997777999999699999999999999999999999999999999999999999777999999999999977799999999999999999999999999777999999999999999999969999999999999999999
+9999999999999999999997777999999999999999999999999999999999999999999999999777799999999999977799999999999999999999999999777799999999999999999999999999999999999999
+9999999999999999999999777999999999999999999999999999999999999999999999999777779999999999777799999999999999999999999999777799999999999999999999999999999999999999
+9999999999999999999999777999999ddddddd99955555559999999999999999999999999977777999999999777799999999999999999999999999977779999999999999999999999999999999999999
+999999999999999999999977799ddddddddddd95555555555599999999999999999999999997777799999999777999999999999999999999999999977779999999999999999999999999999999999999
+999999999999999999999777799ddddddddddd95555555555599999999999999999999999999777779999977777999999999999999999999999999997777999999999999999999999999999999999999
+999699999999999999999777799dddddd9999995555555555599999999999996999999999999977777997777777999999999999999999969999999997777799995555555555555999999999999999999
+99999999999969999999977799999ffffffffffffffff9999999999999999999999999999999997777977777779999999999999999999999999999999777799555555555555555999999222229999999
+999999999999999999999777999ff4444444444444444fff9999999999999999999999999999999777777777999999999999999999999999999999999977799555555555555555999992222222999999
+999999999999999999999777fff444444444444444444444ffff9999999999999999999999999997777777999999999999999999999999999999999999777ff5555ffffffff999999992222222299999
+9999999999999999999997774444444444444444444444444444fff99999999999999999999999977777799996999999999999999999999999999999fffff44444444444444fffff9992222222222999
+999999999999999999999ff44444444444444444444444444444444fff99999999999999999999977777999999999999999999999999999999999fff44444444444444444444444ffffff22222222299
+999999999999999999999f44444444444444444444444444444444444fff99999999999999999977777999999999999999999999999999999999ff4444444444444444444444444444444ffff2222299
+9999999999555999999ff44444444444444444444d444444444444444444fff999999999999997777799999999999999999999999222229999ff4444444444444444444444444444444444444f222299
+99999999995559999ff4444444444444444444444444444444444444444444fff99999999999977779999999999999999999222222222299ff44444444444444444444444444444444444444444fffff
+9999999955555999ff4444444444444d444444444444444444444444444444444ff99999999977779999999999999992222222222222229f44444444444444444444444444444444444444444444444f
+999999555555599ff44444444444444444444444444444444444444444444444444ff99999977777999999999999222222222222222222f444444444444444444444444444d444444444444444444444
+99955555555559f44444444d444444444444444444444444444444444444444444444fff99977779999999999922222222222222222222444444444444444d4444444444444444444444444444444444
+5555555555555f4444444444444444444444444444444444444444444444444444444444ff977799999999999922222222222222222244444444444444444444444444444444444444444444444d4444
+555555555555f44444444444444444444444444444444444444444d4444444444444444444f77799999999999922222222222222f4444444444444444444444444444444444444444444444444444444
+55555555555444444444444444444444444444444444d444444444444444444444444444444777ff999999999922222222222fff444444444d44444444444444444444444444444444444d4444444444
+fffffffff4444444444444444444444444444444444444444444444444444444444d444444444444ffffffffff222222222ff44444444444444444444444444444d44444444444444444444444444444
+444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444ffffffff44444444444444444444444444444444444444444444444444444444444444
+4444444444444444444444444444d444444444444444dddddd44444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444
+444444444444444444444444444444444444d444444ddddddd44444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444
+d44444444444444444444444444444444444444444ddddddddd4444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444
+44444444444444d444444444444444444444444444ddddddddd4444444444444444444444444444444444444444444444444444444444444444444444444d444ddddddddddd444d44444444444444444
+4444444444444444444444444d4444444444444444ddddddddd444444444444444d44444444444d444444444444d4444444444444444d444444d444444444444dddddddddddddd444444444444444d44
+44444444444444ddd4444444444444444444444444dddddddd444444444444444444444444444444444444444444444444d44444444444444444444444444dddddddddddddddddd44444444444444444
+444444444444ddddddddd444444444444444444444ddddddd4444d4444444444444444444444444444444444ddddddd44444444444444444444444444444dddddddddddddddddddd4444444444444444
+4444444444dddddddddddddddd444444444444444444444444444444444444444444444444444444444dddddddddddddd444444444444444444444444444ddddddddddddddddddddd444444444444444
+44444444ddddddddddddddddddd4444444444444444444444444444444444d4444444444444444444dddddddddddddddd444444444444444444444444444ddddddddddddddddddddddd44444d4444444
+44444444dddddddddddddddddddd4444444444444444444444444444444444444444444444444d444dddddddddddddddd4444444444444444444d4444444ddddddddddddddddddddddd4444444444444
+4444d444dddddddddddddddddddd444444444444444444444444444444444444444444444444444dddddddddddddddddd44444444444444444444444444444444dddddddddddddddddd4444444444444
+44444444dddddddddddddddddddd4444444d44444444444d444444444444444444444444444444ddddddddddddddddddd4444444d44444444444444444444444444444ddddddddddddd4444444444444
+4444444444dddddddddddddddddd44444444444444444444444444444444444444444444444444ddddddddddddddddd4444444444444444444444444444444444444444444dddddddd44444444444444
+44444444444444dddddddddddd44444444444444444444444444444444444444444444d4444444dddddddddddddd44444444444444444444444444444444444444444444444444444444444444444444
+4444444444444444444ddddd444d444444444444444444444444444444d4444444444444444444dddddddddddd4444d44444444444444444444444444444444d4444444444d44444444d444444444444
+44444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444d4444444444444444444444444444444444444444444444444d44
+4444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444
+4444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444
+`</field><data>{"commentRefs":[],"fieldData":{"img":"myImages.image3"}}</data></shadow></value><next><block type="variables_set" id="n+5TMeH+;cZ@H^q7Care"><field name="VAR" id="x[^}fHMI{mGwo-0FCN%c">projectileInterval</field><value name="VALUE"><shadow type="math_number" id=",PL={.f,[;WE5Z-yyFD["><field name="NUM">500</field></shadow></value></block></next></block></next></block></next></block></statement><value name="IF3"><shadow type="logic_boolean"><field name="BOOL">TRUE</field></shadow><block type="logic_compare" id=";y1th=LhL$bt;2N_9{=d"><field name="OP">EQ</field><value name="A"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="hudScore" id="TSrav9cTu2TReQ~EicZz"/></value><value name="B"><shadow type="math_number" id="^zKhJjf=z8XQWyo-v@:_"><field name="NUM">100</field></shadow></value></block></value><statement name="DO3"><block type="mixer_play_sound" id="q4j?1/S1`q6_9IZ^Kbx7"><field name="sound">music.powerUp</field><next><block type="gameOver" id="2!N1{GuCsu|57Dc2U%e("><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="false"></mutation><value name="win"><shadow type="toggleWinLose" id="@!COb$.=~VfvdK_Kf:(h"><field name="win">true</field></shadow></value></block></next></block></statement></block></next></block></next></block></statement></block></xml>
